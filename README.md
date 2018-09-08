@@ -1,8 +1,26 @@
 # flix-chat 2.0 server
 
-Server for a chat application inspired by Slack
+Server for a chat application inspired by Slack.
+
+Uses:
+- Express
+- GraphQL
+- PostgreSQL
+
 
 ## How to use
+
+Prerequisites:
+- You neeed PostgreSQL to be installed before running this application
+- A `db.config.js` file configured in the following format:
+
+```JavaScript
+    module.exports = {
+        database: 'flix-chat',
+        username: 'your-username',
+        password: 'your-password'
+    }
+```
 
 Clone:
     

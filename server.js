@@ -7,6 +7,7 @@ import cors from 'cors';
 
 import typeDefs from './schema.graphql';
 import resolvers from './resolvers';
+import models from './models';
 
 const schema = makeExecutableSchema({
     typeDefs,
@@ -27,6 +28,10 @@ app.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql'
 }));
 
-app.listen(PORT, () => {
-    console.log(`Live on port ${PORT}`);
+models.sequelize.sync().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Live on port ${PORT}`);
+    });
 });
+
+
