@@ -30,7 +30,7 @@ app.use('/graphiql', graphiqlExpress({
 
 models.sequelize.sync().then(() => {
     app.listen(PORT, () => {
-        console.log(`Live on port ${PORT}`);
+        console.log(`\n\nLive on port ${PORT}`);
     });
 });
 

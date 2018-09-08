@@ -1,6 +1,5 @@
-
 import Sequelize from 'sequelize';
-import config from '../config/db.config';
+import config from '../config/db.config'
 
 const sequelize = new Sequelize(config.database, config.username, config.password, {
     dialect: 'postgres',
@@ -14,7 +13,7 @@ const models = {
 };
 
 Object.keys(models).forEach((modelName) => {
-    if (models[modelName] && models[modelName].associate) {
+    if ('associate' in models[modelName]) {
         models[modelName].associate(models);
     }
 });

@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
-    
-    const User = sequelize.define("user", {
+
+    const User = sequelize.define('user', {
         username: {
             type: DataTypes.STRING,
             unique: true,
@@ -13,12 +13,11 @@ export default (sequelize, DataTypes) => {
     });
 
     User.associate = (models) => {
-
         User.belongsToMany(models.Group, {
             through: 'member',
             foreignKey: 'userId',
         });
-    }
+    };
 
     return User;
-}
+};

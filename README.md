@@ -15,11 +15,11 @@ Prerequisites:
 - A `db.config.js` file configured in the following format:
 
 ```JavaScript
-    module.exports = {
-        database: 'flix-chat',
-        username: 'your-username',
-        password: 'your-password'
-    }
+module.exports = {
+    database: 'flix-chat',
+    username: 'your-username',
+    password: 'your-password'
+}
 ```
 
 You can use a default username of 'postgres' and the password you used to set up the PostgreSQL service during installation.
@@ -48,15 +48,15 @@ Access GraphiQL at:
 
 ```
 {
-  hi
+    hi
 }
 ```
 
 Will return: 
 ```
 {
-  "data": {
-    "hi": "hello world"
-  }
+    "data": {
+        "hi": "hello world"
+    }
 }
 ```
