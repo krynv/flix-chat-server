@@ -1,11 +1,11 @@
 export default (sequelize, DataTypes) => {
+
     const Group = sequelize.define("group", {
         name: {
             type: DataTypes.STRING,
             unique: true,
         },
     });
-
 
     Group.associate = (models) => {
 
@@ -17,7 +17,7 @@ export default (sequelize, DataTypes) => {
         Group.belongsTo(models.User, {
             foreignKey: 'owner',
         });
-
-        return Group;
     }
+
+    return Group;
 }

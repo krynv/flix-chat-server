@@ -1,10 +1,8 @@
 export default (sequelize, DataTypes) => {
-    const Message = sequelize.define("message", {
-        text: {
-            type: DataTypes.STRING,
-        },
-    });
 
+    const Message = sequelize.define("message", {
+        text: DataTypes.STRING,
+    });
 
     Message.associate = (models) => {
         // 1 to many
@@ -16,7 +14,7 @@ export default (sequelize, DataTypes) => {
         Message.belongsTo(models.User, {
             foreignKey: 'userId',
         });
-
-        return Message;
     }
+
+    return Message;
 }

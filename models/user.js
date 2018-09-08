@@ -1,4 +1,5 @@
 export default (sequelize, DataTypes) => {
+    
     const User = sequelize.define("user", {
         username: {
             type: DataTypes.STRING,
@@ -8,11 +9,8 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             unique: true,
         },
-        password: {
-            type: DataTypes.STRING,
-        }
+        password: DataTypes.STRING,
     });
-
 
     User.associate = (models) => {
 
@@ -20,7 +18,7 @@ export default (sequelize, DataTypes) => {
             through: 'member',
             foreignKey: 'userId',
         });
-
-        return User;
     }
+
+    return User;
 }

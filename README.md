@@ -22,6 +22,8 @@ Prerequisites:
     }
 ```
 
+You can use a default username of 'postgres' and the password you used to set up the PostgreSQL service during installation.
+
 Clone:
     
     git clone git@github.com:krynv/flix-chat-server.git
