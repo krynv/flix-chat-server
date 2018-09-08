@@ -1,0 +1,31 @@
+{
+    "name": "flix-chat-server",
+    "version": "1.0.0",
+    "description": "Server for a chat client inspired by Slack",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon --exec babel-node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "krynv <github.com/krynv>",
+    "license": "ISC",
+    "dependencies": {
+        "apollo-server-express": "^1.4.0",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.3",
+        "graphql": "^0.13.2",
+        "graphql-tools": "^3.1.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-import-graphql": "^2.6.2",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "eslint": "^5.5.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "nodemon": "^1.18.4"
+    }
+}
