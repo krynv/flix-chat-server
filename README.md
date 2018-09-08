@@ -12,7 +12,7 @@ Uses:
 
 Prerequisites:
 - You neeed PostgreSQL to be installed before running this application
-- A `db.config.js` file configured in the following format:
+- A `config/db.config.js` file configured in the following format:
 
 ```JavaScript
 module.exports = {
