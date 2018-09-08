@@ -2,6 +2,8 @@
 .vscode
 .vs
 
+config/db.config.js
+
 # Logs
 logs
 *.log
