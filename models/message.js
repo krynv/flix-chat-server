@@ -14,7 +14,7 @@ export default (sequelize, DataTypes) => {
         Message.belongsTo(models.User, {
             foreignKey: 'userId',
         });
-    }
+    };
 
     return Message;
-}
+};

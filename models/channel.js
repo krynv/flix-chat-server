@@ -10,7 +10,7 @@ export default (sequelize, DataTypes) => {
         Channel.belongsTo(models.Group, {
             foreignKey: 'groupId',
         });
-    }
+    };
 
     return Channel;
-}
+};

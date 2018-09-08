@@ -11,13 +11,13 @@ export default (sequelize, DataTypes) => {
 
         Group.belongsToMany(models.User, {
             through: 'member',
-            foreignKey: 'teamId',
+            foreignKey: 'groupId',
         });
 
         Group.belongsTo(models.User, {
             foreignKey: 'owner',
         });
-    }
+    };
 
     return Group;
-}
+};
