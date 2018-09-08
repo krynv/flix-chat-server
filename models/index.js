@@ -3,7 +3,9 @@ import config from '../config/db.config'
 
 const sequelize = new Sequelize(config.database, config.username, config.password, {
     dialect: 'postgres',
-    unerscored: true
+    define: {
+        underscored: true,
+    }
 });
 
 const models = {
