@@ -5,13 +5,19 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             unique: true,
         },
-    });
+    },
+        {
+            underscored: true,
+        });
 
     Group.associate = (models) => {
 
         Group.belongsToMany(models.User, {
             through: 'member',
-            foreignKey: 'groupId',
+            foreignKey: {
+                name: 'groupId',
+                field: 'group_id',
+            },
         });
 
         Group.belongsTo(models.User, {

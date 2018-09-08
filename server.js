@@ -28,7 +28,7 @@ app.use('/graphiql', graphiqlExpress({
     endpointURL: '/graphql'
 }));
 
-models.sequelize.sync().then(() => {
+models.sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => {
         console.log(`\n\nLive on port ${PORT}`);
     });
