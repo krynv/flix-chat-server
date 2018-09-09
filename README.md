@@ -1,6 +1,6 @@
 # flix-chat 2.0 server
 
-Server for a chat application inspired by Slack.
+Server for an experimental chat application inspired by Slack.
 
 Uses:
 - Express
