@@ -4,6 +4,11 @@ type Group {
     channels: [Channel!]!
 }
 
+type CreateGroupResponse {
+    ok: Boolean!
+    errors: [Error!]
+}
+
 type Mutation {
-    createGroup(name: String!): Boolean!
+    createGroup(name: String!): CreateGroupResponse!
 }
