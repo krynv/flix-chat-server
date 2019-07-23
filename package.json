@@ -20,7 +20,7 @@
         "graphql-tools": "^4.0.5",
         "jsonwebtoken": "^8.5.1",
         "lodash": "^4.17.13",
-        "merge-graphql-schemas": "^1.5.8",
+        "merge-graphql-schemas": "^1.6.1",
         "pg": "^7.11.0",
         "pg-hstore": "^2.3.3",
         "sequelize": "^5.10.1"
